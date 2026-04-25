@@ -1,0 +1,294 @@
+.edu-section {
+  background: var(--bg-secondary);
+  position: relative;
+}
+
+.edu-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-accent), transparent);
+}
+
+.edu-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+/* Degree card */
+.edu-degree-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-accent);
+  border-radius: 24px;
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  transition: all var(--transition-med);
+  position: relative;
+  overflow: hidden;
+}
+
+.edu-section.visible .edu-degree-card {
+  animation: fadeInUp 0.6s both;
+}
+
+.edu-degree-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--gradient-accent);
+}
+
+.edu-degree-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card), var(--shadow-glow);
+}
+
+.edu-degree-top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.edu-icon {
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.edu-badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.edu-badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 4px 12px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 100px;
+  color: var(--text-muted);
+}
+
+.edu-badge.cgpa {
+  background: var(--accent-glow);
+  border-color: var(--border-accent);
+  color: var(--accent-primary);
+  font-weight: 600;
+}
+
+.edu-degree {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.edu-branch {
+  font-size: 0.95rem;
+  color: var(--accent-primary);
+  font-weight: 500;
+  font-family: var(--font-mono);
+}
+
+.edu-college, .edu-period {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.edu-college svg, .edu-period svg {
+  color: var(--accent-primary);
+  flex-shrink: 0;
+}
+
+/* CGPA visual */
+.cgpa-visual {
+  background: var(--bg-secondary);
+  border-radius: 14px;
+  padding: 18px;
+  margin-top: 8px;
+}
+
+.cgpa-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.cgpa-value {
+  font-family: var(--font-mono);
+  color: var(--accent-primary);
+  font-weight: 600;
+}
+
+.cgpa-track {
+  height: 8px;
+  background: var(--border-color);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.cgpa-fill {
+  height: 100%;
+  background: var(--gradient-accent);
+  border-radius: 10px;
+  transition: width 1.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cgpa-note {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  text-align: right;
+}
+
+/* Certs */
+.edu-certs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.certs-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.certs-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cert-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  transition: all var(--transition-fast);
+}
+
+.edu-section.visible .cert-card {
+  animation: slideInLeft 0.5s both;
+}
+
+.cert-card:hover {
+  border-color: var(--accent-primary);
+  background: var(--bg-card-hover);
+  transform: translateX(4px);
+}
+
+.cert-icon {
+  font-size: 1.2rem;
+}
+
+.cert-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.cert-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.cert-issuer {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.cert-check {
+  color: var(--accent-primary);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+/* Agile card */
+.agile-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all var(--transition-med);
+}
+
+.agile-card:hover {
+  border-color: var(--border-accent);
+  transform: translateY(-3px);
+}
+
+.agile-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.agile-icon { font-size: 1.2rem; }
+
+.agile-header h4 {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.agile-card p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.agile-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.agile-chips span {
+  padding: 4px 12px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 100px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  transition: all var(--transition-fast);
+}
+
+.agile-chips span:hover {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+}
+
+@media (max-width: 900px) {
+  .edu-layout { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .edu-degree-card { padding: 24px; }
+}
