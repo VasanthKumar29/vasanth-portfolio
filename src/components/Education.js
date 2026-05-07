@@ -2,10 +2,15 @@ import React, { useEffect, useRef, useState } from 'react';
 import './Education.css';
 
 const certifications = [
-  { name: 'Java', issuer: 'NPTEL / Udemy' },
-  { name: 'Python', issuer: 'NPTEL / Udemy' },
-  { name: 'Data Warehousing & Modelling', issuer: 'NPTEL' },
-  { name: 'Problem Solving in C', issuer: 'NPTEL' },
+  { name: 'Problem Solving through Programming in C', issuer: 'NPTEL' },
+  { name: 'Java Data Structures & Algorithms + LeetCode Exercises', issuer: 'Udemy' },
+  { name: 'Introduction to SQL with MySQL', issuer: 'Udemy' },
+  { name: 'The Complete Python Bootcamp: Zero to Hero', issuer: 'Udemy' },
+  { name: 'Data Engineering with Python and SQL', issuer: 'Udemy' },
+  { name: 'AI for Everyone — Master the Basics', issuer: 'IBM' },
+  { name: 'Introduction to Networks', issuer: 'Cisco Networking Academy' },
+  { name: 'Problem Solving (Basic)', issuer: 'HackerRank' },
+  { name: 'Business English', issuer: 'Infosys Springboard' },
 ];
 
 export default function Education() {
