@@ -13,6 +13,11 @@ const certifications = [
   { name: 'Business English', issuer: 'Infosys Springboard' },
 ];
 
+const academics = [
+  { level: 'HSC', name: 'Higher Secondary Examination', school: 'Seventh Day Adventist Matriculation Higher Secondary School', location: 'Madurai', year: '2020', percentage: '72.8%' },
+  { level: 'SSLC', name: 'Secondary School Leaving Certificate', school: 'Seventh Day Adventist Matriculation Higher Secondary School', location: 'Madurai', year: '2018', percentage: '88.2%' },
+];
+
 export default function Education() {
   const [visible, setVisible] = useState(false);
   const ref = useRef(null);
@@ -100,6 +105,30 @@ export default function Education() {
                 <span>Retrospectives</span>
               </div>
             </div>
+          </div>
+
+          {/* HSC & SSLC */}
+          <div className="academics-cards">
+            {academics.map((edu, i) => (
+              <div key={edu.level} className="academic-card" style={{ animationDelay: `${i * 0.1}s` }}>
+                <div className="academic-header">
+                  <span className="academic-level-badge">{edu.level}</span>
+                  <span className="academic-percentage">{edu.percentage}</span>
+                </div>
+                <h4 className="academic-name">{edu.name}</h4>
+                <p className="academic-school">{edu.school}</p>
+                <div className="academic-meta">
+                  <span className="academic-year">{edu.year}</span>
+                  <span className="academic-location">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                      <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                    {edu.location}
+                  </span>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
