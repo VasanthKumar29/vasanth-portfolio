@@ -28,13 +28,13 @@ export default function About() {
               Engineered for <span>reliability</span>
             </h2>
             <p>
-              I'm a backend engineer at <strong>Tata Consultancy Services</strong>, deployed to <strong>Avis Budget Group</strong> — one of the world's largest vehicle rental companies. My work sits at the intersection of enterprise Java, data integrity, and operational excellence.
+              Backend engineer at <strong>Tata Consultancy Services</strong>, deployed to <strong>Avis Budget Group</strong> — architecting mission-critical enterprise systems where data integrity and operational excellence converge.
             </p>
             <p>
-              I design and maintain batch processing systems that ingest, validate, transform, and persist data across multi-vendor pipelines. Every line of code I ship touches critical business operations, so reliability isn't a buzzword — it's a requirement.
+              I design and maintain high-throughput Java batch ecosystems that ingest, validate, transform, and persist data across distributed multi-vendor pipelines. Every deployment impacts production workflows, making reliability a core engineering discipline rather than a buzzword.
             </p>
             <p>
-              Outside production systems, I actively explore Generative AI tooling to reshape how developers work. I'm also a consistent LeetCode practitioner with 700+ problems solved, keeping my DSA fundamentals sharp.
+              Beyond production systems, I leverage generative AI to reshape developer workflows and maintain algorithmic sharpness through consistent LeetCode practice.
             </p>
             <div className="about-chips">
               <span>Java Batch</span>

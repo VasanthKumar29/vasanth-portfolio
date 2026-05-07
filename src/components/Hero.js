@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import vasanthImg from '../assets/vasanth.jpeg';
 import './Hero.css';
 
-const roles = ['Backend Java Engineer', 'SQL Developer', 'Cloud Migration Expert', 'GenAI Enthusiast'];
+const roles = ['Backend Java Engineer', 'SQL Developer', 'GenAI Enthusiast'];
 
 export default function Hero() {
   const [roleIndex, setRoleIndex] = useState(0);
@@ -65,7 +65,7 @@ export default function Hero() {
           </div>
 
           <p className="hero-description animate-fade-in-up delay-3">
-            Backend-focused engineer at <strong>TCS × Avis Budget Group</strong> — crafting secure enterprise batch systems, optimizing Oracle SQL at scale, and accelerating delivery with Generative AI tools.
+            Backend engineer at <strong>TCS × Avis Budget Group</strong> — architecting enterprise batch systems, optimizing Oracle SQL pipelines, and accelerating delivery through generative AI tooling.
           </p>
 
           <div className="hero-stats animate-fade-in-up delay-4">
