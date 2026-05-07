@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import vasanthImg from '../assets/vasanth-pic.jpeg';
+import vasanthImg from '../assets/vasanth-ai.jpeg';
 import './Hero.css';
 
 const roles = ['Backend Java Engineer', 'SQL Developer', 'GenAI Enthusiast'];
