@@ -10,16 +10,34 @@ const experiences = [
     period: 'Aug 2024 – Present',
     location: 'Bangalore, India',
     type: 'Full-time',
-    bullets: [
-      'Designed and maintained enterprise-grade Java batch applications for automated file ingestion, validation, transformation, and database persistence across multi-vendor pipelines.',
-      'Engineered secure PGP encryption/decryption workflows for inbound and outbound file transfers involving sensitive customer PII.',
-      'Developed and optimized complex Oracle stored procedures, functions, and queries using execution plan analysis and indexing strategies.',
-      'Performed deep production troubleshooting on Linux servers — log analysis and root cause investigation for critical batch workflows.',
-      'Executed end-to-end migration of applications and databases from on-premise infrastructure to cloud, including deployment validation.',
-      'Leveraged Amazon Q and Kiro (GenAI tools) to accelerate code development, optimize SQL queries, and automate debugging workflows.',
-      'Tracked user stories in Jira; participated in Agile sprint planning, reviews, and retrospectives within cross-functional teams.',
+    sections: [
+      {
+        title: 'Migration Team',
+        bullets: [
+          'Led enterprise-wide integration of PGP encryption/decryption across all batch jobs, securing inbound and outbound file transfers involving sensitive customer PII data across multi-vendor pipelines.',
+          'Executed end-to-end migration of batch applications and databases from on-premise to cloud, including deployment validation and post-migration testing.',
+          'Performed deep production troubleshooting on Linux servers via log analysis and root cause investigation to ensure high availability of critical batch workflows.',
+        ],
+      },
+      {
+        title: 'Tolls & Citation Team',
+        bullets: [
+          'Designed and developed Java batch jobs from scratch with multi-threading to handle toll charging and citation processing for non-ABG vehicles, optimizing throughput and processing performance.',
+          'Integrated REST API calls within batch workflows to securely process customer financial transactions (refunds and recovery), coordinating with the AMP team for structured end-to-end API testing.',
+          'Developed and optimized complex Oracle stored procedures, functions, and queries using execution plan analysis and indexing strategies to improve batch processing performance.',
+          'Managed UAT and production deployments with structured release processes, ensuring controlled rollouts and minimal downtime.',
+        ],
+      },
+      {
+        title: 'Cross-Team Contributions',
+        bullets: [
+          'Developed an AI-assisted test automation suite using Playwright, eliminating manual testing efforts and improving application reliability through end-to-end automated test coverage.',
+          'Leveraged Amazon Q and Kiro for AI-assisted development, SQL optimization, debugging, code reviews, and documentation to improve quality and reduce turnaround time.',
+          'Tracked user stories in Jira; participated in Agile sprints, vendor coordination, and conducted Knowledge Transfer sessions for team onboarding.',
+        ],
+      },
     ],
-    tech: ['Java', 'Oracle SQL', 'PGP', 'Linux', 'AWS', 'Jira', 'Amazon Q', 'Kiro'],
+    tech: ['Java', 'Oracle SQL', 'PGP', 'Linux', 'AWS', 'REST API', 'Playwright', 'Jira', 'Amazon Q', 'Kiro'],
   },
 ];
 
@@ -110,14 +128,19 @@ export default function Experience() {
                 </div>
               </div>
 
-              <ul className="exp-bullets">
-                {exp.bullets.map((b, i) => (
-                  <li key={i} style={{ animationDelay: `${i * 0.07}s` }}>
-                    <span className="bullet-arrow">→</span>
-                    {b}
-                  </li>
-                ))}
-              </ul>
+              {exp.sections.map((section, sIdx) => (
+                <div key={sIdx} className="exp-subsection">
+                  <h4 className="exp-subsection-title">{section.title}</h4>
+                  <ul className="exp-bullets">
+                    {section.bullets.map((b, i) => (
+                      <li key={i} style={{ animationDelay: `${i * 0.07}s` }}>
+                        <span className="bullet-arrow">→</span>
+                        {b}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
 
               <div className="exp-tags">
                 {exp.tech.map(t => (

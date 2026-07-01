@@ -15,9 +15,11 @@ const skillGroups = [
     category: 'Backend',
     icon: '⚙',
     skills: [
-      { name: 'Java Batch Processing', level: 88 },
-      { name: 'PGP Encryption', level: 85 },
+      { name: 'Spring Boot', level: 82 },
+      { name: 'Microservices', level: 80 },
+      { name: 'Multi-threading', level: 82 },
       { name: 'REST API Integration', level: 80 },
+      { name: 'Java Batch Processing', level: 88 },
       { name: 'Production Support', level: 86 },
     ],
   },
@@ -89,7 +91,7 @@ export default function Skills() {
     return () => obs.disconnect();
   }, []);
 
-  const highlights = ['Java', 'Oracle SQL', 'Python', 'AWS', 'React.js', 'Linux', 'PGP', 'Jira', 'Amazon Q', 'Postman', 'WinSCP', 'PuTTY', 'Bitbucket', 'FileZilla', 'Kiro'];
+  const highlights = ['Java', 'Spring Boot', 'Microservices', 'Multi-threading', 'Oracle SQL', 'Python', 'AWS', 'React.js', 'Linux', 'Jira', 'Amazon Q', 'Postman', 'WinSCP', 'PuTTY', 'Bitbucket', 'FileZilla', 'Kiro'];
 
   return (
     <section id="skills" ref={ref} className={`skills-section ${visible ? 'visible' : ''}`}>
