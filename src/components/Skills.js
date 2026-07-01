@@ -39,7 +39,6 @@ const skillGroups = [
     skills: [
       { name: 'AWS', level: 70 },
       { name: 'Linux Server', level: 82 },
-      { name: 'Cloud Migration', level: 78 },
       { name: 'Deployment Support', level: 80 },
     ],
   },
